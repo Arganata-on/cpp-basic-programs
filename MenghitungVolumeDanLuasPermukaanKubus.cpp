@@ -8,6 +8,7 @@ void luasPermukaan(int panjangSisi);
 
 int main() {
   int panjangSisi;
+
   cout << "Masukkan panjang sisi kubus (dalam cm): ";
   cin >> panjangSisi;
 
