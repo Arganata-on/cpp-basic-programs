@@ -1,10 +1,13 @@
 #include <iostream>
 using namespace std;
+
 int main() {
   int angka;
   bool bilanganPrima = true;
+
   cout << "Masukkan sebuah angka: ";
   cin >> angka;
+
   if (angka <= 1) {
     bilanganPrima = false;
   }
@@ -15,10 +18,12 @@ int main() {
       break;
     }
   }
+
   if (bilanganPrima) {
     cout << angka << " adalah bilangan prima";
   } else {
     cout << angka << " bukanlah bilangan prima";
   }
+
   return 0;
 }
