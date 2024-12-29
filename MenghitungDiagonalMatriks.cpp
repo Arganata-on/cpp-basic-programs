@@ -2,7 +2,7 @@
 using namespace std;
 
 void menampilkanMatriks(int baris, int kolom, int array[][3]);
-void menghitungDiagonal();
+void menghitungDiagonal(int baris, int array[][3]);
 
 int main()
 {
@@ -11,7 +11,7 @@ int main()
     int kolom = sizeof(array[0]) / sizeof(array[0][0]);
 
     cout << "==============================\n";
-    cout << "Masukkan isi elemen\n";
+    cout << "Masukkan isi elemen: \n";
     cout << "==============================\n";
 
     for (int i = 0; i < baris; i++)
@@ -24,6 +24,7 @@ int main()
     }
 
     menampilkanMatriks(baris, kolom, array);
+    menghitungDiagonal(baris, array);
 
     return 0;
 }
@@ -42,6 +43,15 @@ void menampilkanMatriks(int baris, int kolom, int array[][3])
     }
 }
 
-void menghitungDiagonal()
+void menghitungDiagonal(int baris, int array[][3])
 {
+    double jumlahDiagonal = 0;
+
+    for (int i = 0; i < baris; i++)
+    {
+        jumlahDiagonal += array[i][i];
+    }
+
+    cout << "==============================\n";
+    cout << "Jumlah diagonal: " << jumlahDiagonal;
 }
