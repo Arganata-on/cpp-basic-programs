@@ -7,20 +7,18 @@ void hasilPerkalian(int baris, int kolom2, int hasil[][4]);
 int main()
 {
     int hasil[3][4] = {0};
-
-    int matriks1[][2] = {{1, 2},
-                         {3, 4},
-                         {5, 6}};
-
-    int matriks2[][4] = {{1, 2, 3, 4},
-                         {5, 6, 7, 8}};
+    int matriks1[][2] = {{1, 2}, {3, 4}, {5, 6}};
+    int matriks2[][4] = {{1, 2, 3, 4}, {5, 6, 7, 8}};
 
     int baris = sizeof(matriks1) / sizeof(matriks1[0]);
     int kolom1 = sizeof(matriks1[0]) / sizeof(matriks1[0][0]);
     int kolom2 = sizeof(matriks2[0]) / sizeof(matriks2[0][0]);
 
-    cout << "Hasil perkalian: \n";
+    cout << baris << '\n';
+    cout << kolom1 << '\n';
+    cout << kolom2 << '\n';
 
+    cout << "Hasil perkalian: \n";
     perkalianMatriks(baris, kolom1, kolom2, matriks1, matriks2, hasil);
     hasilPerkalian(baris, kolom2, hasil);
 
